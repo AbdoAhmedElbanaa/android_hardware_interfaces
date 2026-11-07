@@ -391,6 +391,19 @@ cc_defaults {
     ],
 }
 
+filegroup {
+    name: "effectCommonFile",
+    srcs: [
+        "EffectContext.cpp",
+        "EffectThread.cpp",
+        "EffectImpl.cpp",
+    ],
+    visibility: [
+        "//hardware/interfaces/audio/aidl/default:__subpackages__",
+        "//packages/apps/AxionFx:__subpackages__",
+    ],
+}
+
 cc_library_static {
     name: "libaudioeffectaidlcommon",
     srcs: [
